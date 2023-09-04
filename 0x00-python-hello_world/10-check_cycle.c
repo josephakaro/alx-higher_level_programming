@@ -25,5 +25,6 @@ int check_cycle(listint_t *list)
 
 		last_visited = last;
 	}
+
 	return (0);
 }
