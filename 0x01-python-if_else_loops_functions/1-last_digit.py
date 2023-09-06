@@ -3,11 +3,12 @@ import random
 number = random.randint(-10000, 10000)
 
 str_rep = repr(number)
+n = 10
 
 if number < 0:
-    last_digit = ((-1 * number) % 10) * -1
+    last_digit = ((-1 * number) % n) * -1
 else:
-    last_digit = number % 10
+    last_digit = number % n
 
 if last_digit > 5:
     print(f"Last digit of {number} is {last_digit} and is greater than 5")
