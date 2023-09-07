@@ -5,4 +5,4 @@ if __name__ == "__main__":
     a = 1
     b = 2
     add = addition(a, b)
-    print(f"{a} + {b} = {add}")
+    print(f"{a:d} + {b:d} = {add:d}")
