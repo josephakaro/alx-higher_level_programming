@@ -1,11 +1,12 @@
 #!/usr/bin/python
-""" Function that sum two integers """
+""" Function that adds 2 integers """
 
 def add_integer(a, b=98):
-    """ Sum two integer """
+    """ Function that adds 2 integers """
     if type(a) not in [int, float]:
         raise TypeError('a must be an integer')
-    elif type(b) not in [int, float]:
+
+    if type(b) not in [int, float]:
         raise TypeError('b must be an integer')
-    else:
-        return (int(a) + int(b))
+    
+    return (int(a) + int(b))
