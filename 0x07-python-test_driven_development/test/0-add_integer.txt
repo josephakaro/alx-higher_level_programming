@@ -1,0 +1,14 @@
+============================
+doctest for 0-add_integer.py
+============================
+
+Using ``add_integer()``
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+addition of two single digit integers
+::
+>>> add_integer(1, 2)
+3
+
+addition of two multi digit integers
