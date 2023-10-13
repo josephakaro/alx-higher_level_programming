@@ -1,0 +1,9 @@
+============================
+doctest for 2-matrix_divided.py
+============================
+
+Using ``matrix_divided()`` 
+
+returns a new matrix with all elements scalar divided
+::
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
