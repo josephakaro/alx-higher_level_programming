@@ -32,15 +32,15 @@ b must be an integer
 a must be an integer
 >>> try:
 ...     print(add_integer(4, "School"))
-... except TypeError as err:
-...     print(err)
+... except TypeError as e:
+...     print(e)
 ...
 ...
 b must be an integer
 >>> try:
 ...     print(add_integer(None))
-... except TypeError as err:
-...     print(err)
+... except TypeError as e:
+...     print(e)
 ...
 ...
 a must be an integer
