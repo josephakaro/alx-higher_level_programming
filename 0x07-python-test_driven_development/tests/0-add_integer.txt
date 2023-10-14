@@ -22,11 +22,12 @@ function that adds a and b, add_integer(), must be an integer,
 ...     print(e)
 ...
 ...
-    b must be an integer
+b must be an integer
 >>> try:
 ...     print(add_integer(None))
 ... except Exception as e:
 ...     print(e)
 ...
 ...
-    a must be an integer
+a must be an integer
+>>> 

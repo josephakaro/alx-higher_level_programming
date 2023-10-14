@@ -1,0 +1,7 @@
+============================
+doctest for 4-print_square.py
+============================
+
+Using ``print_square()``
+
+>>> print_square = __import__('0-add_integer').add_integer
