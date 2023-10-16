@@ -62,7 +62,7 @@ In this project, you will review everything about python:
 > concepts, you are advice to do deep research per your prefered
 > learning method.
 
-## NOTES:
+## NOTE #1: ARGS AND KWARGS
 
 ### Definitions:
  - *args and **kwargs are special keyword arguments that allow you to pass a variable number of arguments to a Python function.
@@ -90,42 +90,48 @@ In this project, you will review everything about python:
     - It makes your code more readable and maintainable. When you use ``*args`` and ``**kwargs``, you can clearly see what types of arguments your function accepts and how they are used.
 ### Best practices for Using args and kwargs:
  - Here are a few best practices for using ``*args`` and ``**kwargs``:
-    - Always put *args before **kwargs in your function definition.
+    - Always put ``*args`` before ``**kwargs`` in your function definition.
     - Use keyword arguments to pass named arguments to your function.
-    - Use *args to pass a variable number of positional arguments to your function.
-    - Use **kwargs to pass a variable number of keyword arguments to your function.
+    - Use ``*args`` to pass a variable number of positional arguments to your function.
+    - Use ``**kwargs`` to pass a variable number of keyword arguments to your function.
     ### Example:
+     Example 1: Using *args to pass a variable number of positional arguments
     ```python
-       # Example 1: Using *args to pass a variable number of positional arguments
 
         def print_args(*args):
           for arg in args:
             print(arg)
 
         print_args(1, 2, 3, 4, 5)
+    ```
 
-        # Output:
-        # 1
-        # 2
-        # 3
-        # 4
-        # 5
-
-        # Example 2: Using **kwargs to pass a variable number of keyword arguments
-
+     Output:
+    ```bash
+        1
+        2
+        3
+        4
+        5
+    ```
+     
+     Example 2: Using **kwargs to pass a variable number of keyword arguments
+    ```python
         def print_kwargs(**kwargs):
             for key, value in kwargs.items():
                 print(f"{key}: {value}")
 
         print_kwargs(name="Alice", age=25, occupation="Software Engineer")
+    ```
 
-        # Output:
-        # name: Alice
-        # age: 25
-        # occupation: Software Engineer
+     Output:
+    ```bash
+        name: Alice
+        age: 25
+        occupation: Software Engineer
+    ```
 
-        # Example 3: Using *args and **kwargs together
-
+     Example 3: Using *args and **kwargs together
+    ```python
         def my_function(*args, **kwargs):
          # Do something with args and kwargs
 
@@ -133,5 +139,95 @@ In this project, you will review everything about python:
     ```
 
 > [!IMPORTANT]
-> *args and **kwargs are powerful tools that can make your Python code more flexible, reusable, 
+> ``*args`` and ``**kwargs`` are powerful tools that can make your Python code more flexible, reusable, 
 > readable, and maintainable. Be sure to learn how to use them effectively.
+
+## NOTE #2: JSON ENCODER AND DECODER
+
+ ### Definitions:
+ JSON, or JavaScript Object Notation, is a lightweight data-interchange format that has become the most popular medium of exchanging data over the web. 
+ 
+ The reason behind its popularity is that it is both human-readable and easy for machines to parse and generate.
+
+ Python provides a built-in json library to deal with JSON objects. This library includes two important classes:
+  - ``JSONEncoder``: This class encodes Python objects to JSON strings.
+  - ``JSONDecoder``: This class decodes JSON strings to Python objects.
+
+### Usage: JSON Encoder
+ To encode a Python object to a JSON string, you can use the ``json.dumps()`` function. This function takes a Python object as input and returns a JSON string as output.
+ 
+ For example, the following code encodes a Python dictionary to a JSON string:
+
+ ```python
+    import json
+
+    my_dict = {"name": "Alice", "age": 25}
+
+    json_string = json.dumps(my_dict)
+
+    print(json_string)
+ ```
+
+ Output:
+ ```JSON
+    {"name": "Alice", "age": 25}
+ ```
+
+### Usage: JSON Decoder
+    To decode a JSON string to a Python object, you can use the ``json.loads()`` function. This function takes a JSON string as input and returns a Python object as output.
+    
+    For example, the following code decodes a JSON string to a Python dictionary:
+
+```python
+    import json
+
+    json_string = """{"name": "Alice", "age": 25}"""
+
+    my_dict = json.loads(json_string)
+
+    print(my_dict)
+```
+
+Output:
+```JSON
+    {'name': 'Alice', 'age': 25}
+```
+
+### Encoding and Decoding custom objects:
+ The ``json.dumps()`` and ``json.loads()`` functions can be used to encode and decode most Python objects. However, if you have a custom object that you need to encode or decode, you can subclass the ``JSONEncoder`` and ``JSONDecoder`` classes.
+
+ For example, the following code shows a subclass of the ``JSONEncoder`` class that can encode a custom object called ``Point``:
+
+```python
+    import json
+
+    class Point:
+      def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+      def __repr__(self):
+        return f"Point({self.x}, {self.y})"
+
+    class PointEncoder(json.JSONEncoder):
+      def default(self, obj):
+        if isinstance(obj, Point):
+          return {"x": obj.x, "y": obj.y}
+        else:
+          return super().default(obj)
+
+    my_point = Point(10, 20)
+
+    json_string = json.dumps(my_point, cls=PointEncoder)
+
+    print(json_string)
+```
+
+Output
+```JSON
+    {"x": 10, "y": 20}
+```
+ Similarly, you can subclass the ``JSONDecoder`` class to decode custom objects.
+
+### Remarks:
+ The ``json.dumps()`` and ``json.loads()`` functions are powerful tools that can be used to encode and decode Python objects to and from JSON strings. If you need to encode or decode custom objects, you can subclass the ``JSONEncoder`` and ``JSONDecoder`` classes.
