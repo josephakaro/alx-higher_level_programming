@@ -7,3 +7,9 @@ Using ``matrix_divided()``
 returns a new matrix with all elements scalar divided
 ::
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> print(matrix)
+[[1, 2, 3], [4, 5, 6]]
