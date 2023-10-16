@@ -1,12 +1,12 @@
 # 0x0c.Python-Almost a circle
 
-| Project Details                                             | 
-| ----------------------------------------------------------- |
-| By: Joseph Marko                                            |
-| Weight:                                                     |
-| Deadline: First                                             |
-| Scored:                                                     |
-| Languages: ``Python``, ``Object-Oriented-Programming [OOP]``|
+| Project Details                | 
+| ------------------------------ |
+| By: Joseph Marko               |
+| Weight:                        |
+| Deadline: First                |
+| Scored:                        |
+| Languages: ``Python``, ``OOP`` |
 
 > [!WARNING]
 > 1. You are tasked to come up with solutions for the tasks below
@@ -44,8 +44,8 @@ In this project, you will review everything about python:
      - What is Unit testing and how to implement it in a large project.
      - How to serialize and deserialise a Class
      - How to write and read a JSON file
-     - What is *args and how to use it.
-     - What is **kwargs and how to use it.
+     - What is ``*args`` and how to use it.
+     - What is ``**kwargs`` and how to use it.
      - How to handle named arguments in a function
 
 ## Resources:
@@ -62,3 +62,76 @@ In this project, you will review everything about python:
 > concepts, you are advice to do deep research per your prefered
 > learning method.
 
+## NOTES:
+
+### Definitions:
+ - *args and **kwargs are special keyword arguments that allow you to pass a variable number of arguments to a Python function.
+
+| Keyword  | Descriptions                                                                    |
+| -------  | ------------------------------------------------------------------------------- |
+| *args    | Accepts a variable number of non-keyword arguments and stores them in a tuple.  |
+| **kwargs | accepts a variable number of keyword arguments and stores them in a dictionary. |
+
+### Usage:
+ - To use *args and **kwargs, you simply need to add them as parameters to your function definition. For example:
+
+```python
+    def my_function(*args, **kwargs):
+    # Do something with args and kwargs 
+```
+ - To pass arguments to your function using *args and **kwargs, you simply need to pass them as positional arguments or keyword arguments, respectively. For example:
+
+ ```python
+    my_function(1, 2, 3, name="Joseph")
+ ```
+### Advantages of using args and kwargs:
+ - Using ``*args`` and ``**kwargs`` has a number of advantages, including:
+    - It makes your functions more flexible and reusable. You can use ``*args`` and ``**kwargs`` to write functions that can accept any number of arguments, regardless of their type.
+    - It makes your code more readable and maintainable. When you use ``*args`` and ``**kwargs``, you can clearly see what types of arguments your function accepts and how they are used.
+### Best practices for Using args and kwargs:
+ - Here are a few best practices for using ``*args`` and ``**kwargs``:
+    - Always put *args before **kwargs in your function definition.
+    - Use keyword arguments to pass named arguments to your function.
+    - Use *args to pass a variable number of positional arguments to your function.
+    - Use **kwargs to pass a variable number of keyword arguments to your function.
+    ### Example:
+    ```python
+       # Example 1: Using *args to pass a variable number of positional arguments
+
+        def print_args(*args):
+          for arg in args:
+            print(arg)
+
+        print_args(1, 2, 3, 4, 5)
+
+        # Output:
+        # 1
+        # 2
+        # 3
+        # 4
+        # 5
+
+        # Example 2: Using **kwargs to pass a variable number of keyword arguments
+
+        def print_kwargs(**kwargs):
+            for key, value in kwargs.items():
+                print(f"{key}: {value}")
+
+        print_kwargs(name="Alice", age=25, occupation="Software Engineer")
+
+        # Output:
+        # name: Alice
+        # age: 25
+        # occupation: Software Engineer
+
+        # Example 3: Using *args and **kwargs together
+
+        def my_function(*args, **kwargs):
+         # Do something with args and kwargs
+
+        my_function(1, 2, 3, name="Alice", age=25) 
+    ```
+
+> [!IMPORTANT]
+> *args and **kwargs are powerful tools that can make your Python code more flexible, reusable, 
+> readable, and maintainable. Be sure to learn how to use them effectively.
