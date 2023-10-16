@@ -4,13 +4,13 @@
     <img src="https://us.v-cdn.net/6036206/uploads/7K60Z13RKKWF/astrato-airbnb-gif.gif">
 </p>
 
-| Project Details                                        | 
-| ------------------------------------------------------ |
-| By: Joseph Marko                                       |
-| Weight:                                                |
-| Deadline: First                                        |
-| Scored:                                                |
-| Languages: ``Python``, ``OOP``                         |
+| Project Details                                                | 
+| -------------------------------------------------------------- |
+| By: [Joseph Marko](https://github.com/josephmarko/alx-higher_level_programming/commits?author=josephmarko)                                               |
+| Weight:                                                        |
+| Deadline: First                                                |
+| Scored:                                                        |
+| Languages: ``Python``, Object-Oriented-Programming [``OOP``]`` |
 
 > [!WARNING]
 > 1. You are tasked to come up with solutions for the tasks below
