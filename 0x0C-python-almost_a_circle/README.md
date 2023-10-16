@@ -1,12 +1,12 @@
 # 0x0c.Python-Almost a circle
 
-| Project Details                | 
-| ------------------------------ |
-| By: Joseph Marko               |
-| Weight:                        |
-| Deadline: First                |
-| Scored:                        |
-| Languages: ``Python``, ``OOP`` |
+| Project Details                                        | 
+| ------------------------------------------------------ |
+| By: Joseph Marko                                       |
+| Weight:                                                |
+| Deadline: First                                        |
+| Scored:                                                |
+| Languages: ``Python``, ``OOP``                         |
 
 > [!WARNING]
 > 1. You are tasked to come up with solutions for the tasks below
@@ -153,7 +153,7 @@ In this project, you will review everything about python:
   - ``JSONEncoder``: This class encodes Python objects to JSON strings.
   - ``JSONDecoder``: This class decodes JSON strings to Python objects.
 
-### Usage: JSON Encoder
+ ### Usage: JSON Encoder
  To encode a Python object to a JSON string, you can use the ``json.dumps()`` function. This function takes a Python object as input and returns a JSON string as output.
  
  For example, the following code encodes a Python dictionary to a JSON string:
@@ -173,7 +173,7 @@ In this project, you will review everything about python:
     {"name": "Alice", "age": 25}
  ```
 
-### Usage: JSON Decoder
+ ### Usage: JSON Decoder
     To decode a JSON string to a Python object, you can use the ``json.loads()`` function. This function takes a JSON string as input and returns a Python object as output.
     
     For example, the following code decodes a JSON string to a Python dictionary:
@@ -188,12 +188,12 @@ In this project, you will review everything about python:
     print(my_dict)
 ```
 
-Output:
+ Output:
 ```JSON
-    {'name': 'Alice', 'age': 25}
+    {"name": "Alice", "age": 25}
 ```
 
-### Encoding and Decoding custom objects:
+ ### Encoding and Decoding custom objects:
  The ``json.dumps()`` and ``json.loads()`` functions can be used to encode and decode most Python objects. However, if you have a custom object that you need to encode or decode, you can subclass the ``JSONEncoder`` and ``JSONDecoder`` classes.
 
  For example, the following code shows a subclass of the ``JSONEncoder`` class that can encode a custom object called ``Point``:
@@ -223,11 +223,74 @@ Output:
     print(json_string)
 ```
 
-Output
+ Output
 ```JSON
     {"x": 10, "y": 20}
 ```
  Similarly, you can subclass the ``JSONDecoder`` class to decode custom objects.
 
-### Remarks:
+ ### Remarks:
  The ``json.dumps()`` and ``json.loads()`` functions are powerful tools that can be used to encode and decode Python objects to and from JSON strings. If you need to encode or decode custom objects, you can subclass the ``JSONEncoder`` and ``JSONDecoder`` classes.
+
+## NOTE #3: Unittest module
+ The unittest module is a built-in Python module that provides a framework for writing and running unit tests. Unit tests are small, self-contained tests that verify the functionality of a single unit of code, such as a function or class.
+
+ To use the unittest module, you first need to import it into your code:
+
+```python
+    import unittest
+```
+ Next, you need to create a subclass of the ``unittest.TestCase`` class. This class provides a number of methods that you can use to write your tests, such as ``assertEqual()``, ``assertTrue()``, and ``assertFalse()``.
+
+ For example, the following code shows a simple unit test for a function called ``add()`` that adds two numbers together:
+
+```python
+    import unittest
+
+    class TestAddFunction(unittest.TestCase):
+
+      def test_add_two_positive_numbers(self):
+        self.assertEqual(add(1, 2), 3)
+
+      def test_add_two_negative_numbers(self):
+        self.assertEqual(add(-1, -2), -3)
+```
+ To run your tests, you can use the unittest.main() function. This function will automatically discover all of the test cases in your code and run them.
+
+ For example, the following code runs the unit tests for the TestAddFunction class:
+ 
+```python
+   if __name__ == "__main__":
+     unittest.main() 
+```
+ If all of your tests pass, you will see the following output:
+ 
+ Output:
+```bash
+    Ran 2 tests in 0.002s
+
+    OK
+```
+ If any of your tests fail, you will see an error message that indicates which test failed and why.
+
+ ### Advantages of using the unittest module
+
+ There are a number of advantages to using the unittest module to write your unit tests, including:
+
+ - The unittest module is built-in to Python, so you don't need to install any additional libraries.
+ - The unittest module provides a simple and easy-to-use framework for writing and running unit tests.
+ - The unittest module is flexible enough to handle a wide variety of testing needs.
+
+ ### Best practices for using the unittest module
+
+ Here are a few best practices for using the unittest module:
+
+ - Write a unit test for every unit of code in your program.
+ - Make sure that your unit tests are independent of each other. This means that each unit test should be able to run without relying on any other unit tests.
+ - Use descriptive names for your unit tests. This will make it easier to understand what each test is doing.
+ - Use the unittest.skip() decorator to skip unit tests that are not yet implemented or that are not currently relevant.
+ - Use the unittest.expectedFailure decorator to mark unit tests that are expected to fail. This can be useful for testing negative scenarios.
+
+ ## Remarks:
+
+ - The unittest module is a powerful tool that can help you to write and run unit tests for your Python code. By following the best practices outlined above, you can ensure that your unit tests are effective and efficient.
