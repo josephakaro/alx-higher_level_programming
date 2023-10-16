@@ -294,3 +294,12 @@ In this project, you will review everything about python:
  ## Remarks:
 
  - The unittest module is a powerful tool that can help you to write and run unit tests for your Python code. By following the best practices outlined above, you can ensure that your unit tests are effective and efficient.
+
+# My Tasks:
+- [ ] Create a README file at the root of the directory
+- [ ] Create required project files
+- [ ] Write the initial base class for the project module
+- [ ] Code all of the required functions, class etc..
+- [ ] Write all of the project unit tests
+- [ ] Check for pycodesytles
+- [ ] Final Submissions
