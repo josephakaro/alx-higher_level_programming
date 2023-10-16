@@ -1,5 +1,9 @@
 # 0x0c.Python-Almost a circle
 
+<p align="center">
+    <img src="https://i.gifer.com/fetch/w300-preview/bb/bb3c6cba6c3805a985577dfd4f292b8a.gif">
+</p>
+
 | Project Details                                        | 
 | ------------------------------------------------------ |
 | By: Joseph Marko                                       |
