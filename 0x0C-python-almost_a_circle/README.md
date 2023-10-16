@@ -1,15 +1,16 @@
 # 0x0c.Python-Almost a circle
 
-| Project Details                                           | 
-| --------------------------------------------------------- |
-| By: Joseph Marko                                          |
-| Weight: 1                                                 |
-| Deadline: 1st Deadline                                    |
-| Score:                                                    |
-| Languages: Python, Object-Oriented-Programming [OOP]      |
+| Project Details                                            | 
+| ---------------------------------------------------------- |
+| --------- || --------------------------------------------- |
+| By        || Joseph Marko                                  |
+| Weight    ||                                               |
+| Deadline  || 1st Deadline                                  |
+| Scored    ||                                               |
+| Languages || Python, Object-Oriented-Programming [OOP]     |
 
 ## Background Context:
-    The AirBnb project is a big part of the Higher level Curriculum. This project will help you to be ready for it.
+    The AirBnB project is a big part of the Higher level Curriculum. This project will help you to be ready for it.
     
     In this project, you will review everything about python:
 
