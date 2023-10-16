@@ -1,7 +1,6 @@
 # 0x0c.Python-Almost a circle
 
-| Project Details                                            | 
-| ---------------------------------------------------------- |
+|           || Project Details                               | 
 | --------- || --------------------------------------------- |
 | By        || Joseph Marko                                  |
 | Weight    ||                                               |
