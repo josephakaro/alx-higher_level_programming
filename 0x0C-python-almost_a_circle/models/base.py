@@ -3,6 +3,7 @@
     This module holds Base Class of all Classes in this project files.\
     It is aimed at managing id attributes of all future classes and avoid at duplicating same code.
 """
+import json
 
 class Base:
     """ Base class """
