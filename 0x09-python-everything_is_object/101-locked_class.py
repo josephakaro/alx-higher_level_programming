@@ -5,4 +5,6 @@
 
 
 class LockedClass:
-    pass
+    __slots__ = ['first_name']
+    def __init__(self) -> None:
+        pass
