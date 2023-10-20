@@ -8,3 +8,8 @@ class LockedClass:
     __slots__ = ['first_name']
     def __init__(self) -> None:
         pass
+    def __setattr__(self, name, value):
+        if name == 'first_name':
+            object.__setattr__(self, name, value)
+        else:
+            raise AttributeError("Cannot add new attribute")
