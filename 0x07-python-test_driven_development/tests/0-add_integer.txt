@@ -6,6 +6,8 @@ Using ``add_integer()``
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
+Chacking for normal Operations
+::
 >>> print(add_integer(1, 2))
 3
 >>> print(add_integer(100, 2))
@@ -16,6 +18,9 @@ Using ``add_integer()``
 100
 >>> print(add_integer(100.3, -2))
 98
+
+Chacking for Exception errors
+::
 >>> try:
 ...     print(add_integer(4, "School"))
 ... except Exception as e:
@@ -30,6 +35,9 @@ b must be an integer
 ... 
 ...     
 a must be an integer
+
+Chacking for OverflowError as necessary
+::
 >>> print(add_integer('1e309', 1))
 Traceback (most recent call last):
   File "<pyshell#18>", line 1, in <module>
@@ -44,3 +52,13 @@ Traceback (most recent call last):
   File "<pyshell#4>", line 8, in add_integer
     return int(a) + int(b)
 OverflowError: cannot convert float infinity to integer
+
+Chacking for ValueError as necessary
+::
+>>> print(add_integer(float('nan'), 2))
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    print(add_integer(float('nan'), 2))
+  File "<pyshell#4>", line 8, in add_integer
+    return int(a) + int(b)
+ValueError: cannot convert float NaN to integer
