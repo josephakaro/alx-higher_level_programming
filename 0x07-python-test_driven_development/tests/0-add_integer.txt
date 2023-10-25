@@ -6,27 +6,41 @@ Using ``add_integer()``
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
-function that adds a and b, add_integer(), must be an integer,
-::
->>> add_integer(1, 2)
+>>> print(add_integer(1, 2))
 3
->>> add_integer(100, -2)
+>>> print(add_integer(100, 2))
+102
+>>> print(add_integer(100, -2))
 98
->>> add_integer(2)
+>>> print(add_integer(2))
 100
->>> add_integer(100.3, -2)
+>>> print(add_integer(100.3, -2))
 98
 >>> try:
 ...     print(add_integer(4, "School"))
 ... except Exception as e:
 ...     print(e)
-...
-...
+... 
+...     
 b must be an integer
 >>> try:
 ...     print(add_integer(None))
 ... except Exception as e:
 ...     print(e)
-...
-...
+... 
+...     
 a must be an integer
+>>> print(add_integer('1e309', 1))
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    print(add_integer('1e309', 1))
+  File "<pyshell#4>", line 4, in add_integer
+    raise TypeError('a must be an integer')
+TypeError: a must be an integer
+>>> print(add_integer(float('1e309'), 1))
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    print(add_integer(float('1e309'), 1))
+  File "<pyshell#4>", line 8, in add_integer
+    return int(a) + int(b)
+OverflowError: cannot convert float infinity to integer

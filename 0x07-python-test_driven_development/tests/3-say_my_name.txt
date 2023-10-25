@@ -1,40 +1,71 @@
-===================================
-The ``say_my_name doctest`` module
-===================================
+============================
+doctest for 0-add_integer.py
+============================
 
-Using ``say_my_name``
+Using ``add_integer()``
 
+>>> add_integer = __import__('0-add_integer').add_integer
 
-    >>> say_my_name = __import__('3-say_my_name').say_my_name
+addition of two single digit integers
+::
+>>> add_integer(1, 2)
+3
 
-    Passing two regular strings:
-    >>> say_my_name("Olivia", "Butler")
-    My name is Olivia Butler
+addition of two multi digit integers
+::
+>>> add_integer(123, 456)
+579
 
-    Passing one argument 'fist_name':
-    >>> say_my_name("Lilith")
-    My name is Lilith
+addition of two negative integers
+::
+>>> add_integer(-9, -2)
+-11
 
-    Passing an empty parameter:
-    >>> say_my_name()
-    Traceback (most recent call last):
-        ...
-    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+addition of one positive, one negative integers
+::
+>>> add_integer(9, -3)
+6
 
-    Passing a non-literal:
-    >>> say_my_name(Claire)
-    Traceback (most recent call last):
-        ...
-    NameError: name 'Claire' is not defined
+addition of one integer and default value of 98
+::
+>>> add_integer(10)
+108
 
-    Passing a non-string with a string:
-    >>> say_my_name(1, "Calvin")
-    Traceback (most recent call last):
-        ...
-    TypeError: first_name must be a string
+addition of two floats
+::
+>>> add_integer(1.2, 4.8)
+6
 
-    Passing a non-string in 'last_name':
-    >>> say_my_name("Lucy", 7)
-    Traceback (most recent call last):
-        ...
-    TypeError: last_name must be a string
+testing addition of large integer
+::
+>>> add_integer(100000, 1)
+100001
+
+testing addition of two large integers
+::
+>>> add_integer(4294967296, 4294967296)
+8589934592
+
+testing how add_integer function handles None argument
+::
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+testing how add_integer function handles more than 2 arguments
+::
+>>> add_integer(7, 7, 7)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 2 arguments but 3 were given
+
+testing how add_integer function handles both arguments not of type int or float
+::
+>>> add_integer("1", "2")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+testing how add_integer function handles if 1 argument is boolean
+::
+>>> add_integer(2, Fale)
+Traceback (most recent call last):
+TypeError: a must be an integer
