@@ -1,0 +1,7 @@
+============================
+doctest for 100-matrix_mul.py
+============================
+
+``matrix_mul()`` returns a new matrix with all elements scalar divided
+
+>>> matrix_mul = __import__('2-matrix_mul').matrix_multiply

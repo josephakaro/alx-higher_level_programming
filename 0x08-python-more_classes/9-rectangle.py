@@ -76,3 +76,8 @@ class Rectangle:
             return ((self.width * 2) + (self.height * 2))
         else:
             return 0
+
+    @classmethod
+    def square(cls, size=0):
+        square = eval("Rectangle({}, {})".format(size, size))
+        return (square)

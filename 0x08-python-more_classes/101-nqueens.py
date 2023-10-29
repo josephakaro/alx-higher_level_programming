@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def check(board, n, row, col):
 
     if row >= n or col >= n:

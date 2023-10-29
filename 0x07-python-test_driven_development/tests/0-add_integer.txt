@@ -6,59 +6,66 @@ Using ``add_integer()``
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
-Chacking for normal Operations
+addition of two single digit integers
 ::
->>> print(add_integer(1, 2))
+>>> add_integer(1, 2)
 3
->>> print(add_integer(100, 2))
-102
->>> print(add_integer(100, -2))
-98
->>> print(add_integer(2))
-100
->>> print(add_integer(100.3, -2))
-98
 
-Chacking for Exception errors
+addition of two multi digit integers
 ::
->>> try:
-...     print(add_integer(4, "School"))
-... except Exception as e:
-...     print(e)
-... 
-...     
-b must be an integer
->>> try:
-...     print(add_integer(None))
-... except Exception as e:
-...     print(e)
-... 
-...     
-a must be an integer
+>>> add_integer(123, 456)
+579
 
-Chacking for OverflowError as necessary
+addition of two negative integers
 ::
->>> print(add_integer('1e309', 1))
+>>> add_integer(-9, -2)
+-11
+
+addition of one positive, one negative integers
+::
+>>> add_integer(9, -3)
+6
+
+addition of one integer and default value of 98
+::
+>>> add_integer(10)
+108
+
+addition of two floats
+::
+>>> add_integer(1.2, 4.8)
+6
+
+testing addition of large integer
+::
+>>> add_integer(100000, 1)
+100001
+
+testing addition of two large integers
+::
+>>> add_integer(4294967296, 4294967296)
+8589934592
+
+testing how add_integer function handles None argument
+::
+>>> add_integer(None)
 Traceback (most recent call last):
-  File "<pyshell#18>", line 1, in <module>
-    print(add_integer('1e309', 1))
-  File "<pyshell#4>", line 4, in add_integer
-    raise TypeError('a must be an integer')
 TypeError: a must be an integer
->>> print(add_integer(float('1e309'), 1))
-Traceback (most recent call last):
-  File "<pyshell#19>", line 1, in <module>
-    print(add_integer(float('1e309'), 1))
-  File "<pyshell#4>", line 8, in add_integer
-    return int(a) + int(b)
-OverflowError: cannot convert float infinity to integer
 
-Chacking for ValueError as necessary
+testing how add_integer function handles more than 2 arguments
 ::
->>> print(add_integer(float('nan'), 2))
+>>> add_integer(7, 7, 7)
 Traceback (most recent call last):
-  File "<pyshell#20>", line 1, in <module>
-    print(add_integer(float('nan'), 2))
-  File "<pyshell#4>", line 8, in add_integer
-    return int(a) + int(b)
-ValueError: cannot convert float NaN to integer
+TypeError: add_integer() takes from 2 arguments but 3 were given
+
+testing how add_integer function handles both arguments not of type int or float
+::
+>>> add_integer("1", "2")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+testing how add_integer function handles if 1 argument is boolean
+::
+>>> add_integer(2, Fale)
+Traceback (most recent call last):
+TypeError: a must be an integer

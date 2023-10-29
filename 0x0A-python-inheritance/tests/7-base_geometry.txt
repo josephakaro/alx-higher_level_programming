@@ -1,0 +1,63 @@
+==============================
+doctest for 7-base_geometry.py
+==============================
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> obj = BaseGeometry()
+>>> obj.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+testing for negative number
+::
+>>> obj.integer_validator("age", -3)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+testing for floats
+::
+>>> obj.integer_validator("float", 1.2345)
+Traceback (most recent call last):
+TypeError: float must be an integer
+
+testing for floats
+::
+>>> obj.integer_validator("float", 3.14)
+Traceback (most recent call last):
+TypeError: float must be an integer
+
+testing for not enough args
+::
+>>> obj.integer_validator(1)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+testing for not enough args
+::
+>>> obj.integer_validator("orange")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+testing for not enough args
+::
+>>> obj.integer_validator(None)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+testing for no value
+::
+>>> obj.integer_validator("distance")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+testing for wrong type
+::
+>>> obj.integer_validator("distance", "purple")
+Traceback (most recent call last):
+TypeError: distance must be an integer
+
+testing for none
+::
+>>> obj.integer_validator("None", None)
+Traceback (most recent call last):
+TypeError: None must be an integer

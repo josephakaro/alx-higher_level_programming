@@ -1,0 +1,17 @@
+========================
+doctest for 1-my_list.py
+=======================
+
+using 'print_sorted()'
+
+>>> MyList = __import__('1-my_list').MyList
+
+sorting of single numbers
+::
+>>> print_sorted(1, 4, 2, 3, 5)
+1, 2, 3, 4, 5
+
+sorting of positive and negative numbers
+::
+>>> print_sorted(1, -4, 2, -3, 5)
+-4, -3, 1, 2, 5
