@@ -1,2 +1,2 @@
-#!/bin/env mysql
-SHOW DATABASE
+-- lists all databases of your MySQL server
+SHOW DATABASES;
