@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 const { argv } = require("node:process");
 
 if (argv.length >= 3) {
