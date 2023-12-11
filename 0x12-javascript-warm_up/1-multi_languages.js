@@ -1,3 +1,3 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const lines = "C is fun\nPython is cool\nJavaScript amazing";
-console.log(lines);
+if (lines) console.log(lines);
