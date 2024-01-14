@@ -13,8 +13,9 @@ def main(argv):
     uses the GitHub API to display your id.
     """
     user = argv[1]
-    response = requests.get('https://api.github.com/user',
-                            auth=HTTPBasicAuth(user))
+    password = argv[2]
+    response = requests.get("https://api.github.com/['$user']",
+                            auth=HTTPBasicAuth(user, password))
     try:
         profile_info = response.json()
         print(profile_info['id'])
