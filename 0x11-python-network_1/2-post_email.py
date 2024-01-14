@@ -20,5 +20,6 @@ def main(argv):
         result = response.read()
         print(result.decode('utf8'))
 
+
 if __name__ == "__main__":
     main(argv)
