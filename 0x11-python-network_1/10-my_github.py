@@ -14,7 +14,7 @@ def main(argv):
     """
     user = argv[1]
     password = argv[2]
-    response = requests.get("https://api.github.com/['$user']",
+    response = requests.get("https://api.github.com/user",
                             auth=HTTPBasicAuth(user, password))
     try:
         profile_info = response.json()
