@@ -18,5 +18,6 @@ def main(argv):
         headers = response.info()
         print(headers['X-Request-Id'])
 
+
 if __name__ == "__main__":
     main(argv[1])
