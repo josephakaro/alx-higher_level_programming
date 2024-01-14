@@ -18,7 +18,7 @@ def main(argv):
                             auth=HTTPBasicAuth(user, password))
     try:
         profile_info = response.json()
-        if profile_info.id == id:
+        if profile_info.id:
             print(profile_info['id'])
     except ValueError:
         print('None')
