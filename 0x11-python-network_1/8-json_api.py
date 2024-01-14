@@ -23,10 +23,9 @@ def main(argv):
         result = r.json()
         if bool(result) is False:
             print("No result")
-    except:
-        print("Not a valid JSON")
-    else:
         print("[{}] {}".format(result['id'], result['name']))
+    except ValueError:
+        print("Not a valid JSON")
 
 
 if __name__ == "__main__":
